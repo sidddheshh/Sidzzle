@@ -25,7 +25,8 @@ const questionSchema = new mongoose.Schema({
   }
 });
 
-const Question = mongoose.model('Question', questionSchema,);
+const Question = mongoose.model('Question', questionSchema, 'questions');
+
 
 
 // API route — get today's question (example: ID = 1)
