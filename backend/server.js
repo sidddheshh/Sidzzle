@@ -5,7 +5,7 @@ const cors = require('cors');
 require('dotenv').config(); // for .env file
 
 const app = express();
-app.use(cors()); // allow requests from frontend
+app.use(cors()); // allow requests from frontend  
 app.use(express.json()); // parse JSON data
 
 // MongoDB connect
