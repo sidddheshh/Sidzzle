@@ -25,12 +25,13 @@ const QuestionCard = () => {
   const [showConfetti, setShowConfetti] = useState(false);
   const [streakPulse, setStreakPulse] = useState(false);
 
-  useEffect(() => {
-    API.get("/question/today")
-      .then((res) => {
-        console.log("API Response:", res.data);
-        setQuestion(res.data);
-      })
+
+useEffect(() => {
+  API.get("/question/today")
+  .then((res) => {
+    console.log("API Response:", res.data);
+    setQuestion(res.data);
+  })
       .catch((err) => console.error(err));
   }, []);
 

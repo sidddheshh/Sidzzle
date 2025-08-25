@@ -27,16 +27,20 @@ const questionSchema = new mongoose.Schema({
 
 const Question = mongoose.model('Question', questionSchema, 'questions');
 
+const today = new Date();
+const todaysDate = today.getDate();
 
 
 // API route — get today's question (example: ID = 1)
 app.get('/api/question/today', async (req, res) => {
   try {
-
-   // print here
-   console.log("API called..")
-    const question = await Question.findOne({ id: 1 }); // Our original query
-    console.log("Result of findOne({ id: 1 }):", question); // print here
+    
+    // print here
+    console.log("API called..")
+    console.log('Todays date : '+ todaysDate);
+    
+    const question = await Question.findOne({ id: todaysDate }); // Our original query
+    console.log("Todays Question:", question); // print here
 
     res.json(question);
   } catch (err) {
