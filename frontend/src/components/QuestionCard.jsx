@@ -29,7 +29,7 @@ const QuestionCard = () => {
 useEffect(() => {
   API.get("/question/today")
   .then((res) => {
-    console.log("API Response:", res.data);
+    // console.log("API Response:", res.data);
     setQuestion(res.data);
   })
       .catch((err) => console.error(err));

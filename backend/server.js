@@ -37,7 +37,7 @@ app.get('/api/question/today', async (req, res) => {
     
     // print here
     console.log("API called..")
-    console.log('Todays date : '+ todaysDate);
+    // console.log('Todays date : '+ todaysDate);
     
     const question = await Question.findOne({ id: todaysDate }); // Our original query
     console.log("Todays Question:", question); // print here
