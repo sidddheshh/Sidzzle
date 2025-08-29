@@ -72,17 +72,19 @@ useEffect(() => {
     }
   };
 
-  if (!question) return <p style={{ color: "#000" }}>Loading...</p>;
+  if (!question) return <p style={{ color: "#000" }}>Loading the question...</p>;
 
   return (
     <Box
       sx={{
         minHeight: "100vh",
+        // width: "100%",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        bgcolor: "#111211ff", // neon green background
+        bgcolor: "#111211ff", 
         p: 2,
+      
       }}
     >
       {showConfetti && <Confetti />}

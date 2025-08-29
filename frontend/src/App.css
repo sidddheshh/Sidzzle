@@ -1,4 +1,10 @@
-body {
-  overflow: hidden; /* Prevents scrolling */
-  height: 100vh;    /* Lock viewport height */
+/* body {
+  overflow: hidden; 
+  height: 100vh;    
+} */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #111211ff; /* Match your app background */
 }
